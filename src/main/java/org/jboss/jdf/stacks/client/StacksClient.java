@@ -93,11 +93,7 @@ public class StacksClient {
      * @return the stacks
      */
     public Stacks getStacks() {
-        Stacks stacks = initializeStacks();
-        if (stacks == null) {
-            throw new IllegalStateException("Error getting Stacks info");
-        }
-        return stacks;
+        return initializeStacks();
     }
 
     /**
@@ -132,8 +128,8 @@ public class StacksClient {
         }
         // If the Repostream stills empty after falling back to cache
         if (repoStream == null) {
-            msg.showErrorMessage("The Cache is empty. Try going online to get the list of available JDF Stacks!");
-            return null;
+            msg.showWarnMessage("Cache empty. Falling back to embed file");
+            return this.getClass().getResourceAsStream("/stacks.yaml");
         } else {
             return repoStream;
         }

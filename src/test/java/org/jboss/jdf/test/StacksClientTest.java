@@ -117,9 +117,8 @@ public class StacksClientTest {
         stacksClient.getActualConfiguration().setUrl(new URL("file:///nonexistingfile.yaml"));
         try {
             stacksClient.getStacks();
-            Assert.fail("should fail with wrong url");
-        } catch (IllegalStateException e) {
-            Assert.assertNotNull("No file available to get stacks information", e);
+        } catch (Exception e) {
+            Assert.fail("Should fall back to Classpath");
         }
     }
 
@@ -146,9 +145,8 @@ public class StacksClientTest {
         stacksClient.eraseRepositoryCache();
         try {
             stacksClient.getStacks();
-            Assert.fail("should fail because we had no cache and it's not online");
-        } catch (IllegalStateException e) {
-            Assert.assertNotNull("Not online and no cache to use", e);
+        } catch (Exception e) {
+            Assert.fail("Should fall back to Classpath");
         }
     }
 

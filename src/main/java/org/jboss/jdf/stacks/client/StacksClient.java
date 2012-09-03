@@ -66,18 +66,26 @@ public class StacksClient {
     }
 
     private Stacks initializeStacks() {
+        InputStream inputStream = null;
         try {
             // Retrieve inputStream (local cache or remote)
-            InputStream inputStream = getStacksInputStream();
+            inputStream = getStacksInputStream();
             Stacks stacks = null;
             if (inputStream != null) {
                 stacks = new Parser().parse(inputStream);
-                inputStream.close();
             }
             return stacks;
-        } catch (IOException e) {
-            msg.showErrorMessageWithCause("IO Exception", e);
+        } catch (FileNotFoundException e) {
+            msg.showErrorMessageWithCause("FileNotFoundException", e);
             return null;
+        } finally {
+            if (inputStream != null) {
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    msg.showErrorMessageWithCause("Something bad happened when closing the inputstream", e);
+                }
+            }
         }
     }
 

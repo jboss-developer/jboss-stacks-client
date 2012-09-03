@@ -32,9 +32,9 @@ import java.net.URL;
  */
 public interface StacksClientConfiguration {
     
-    public final String FORMAT = "1.0.0.Beta6";
+    public final String STACKS_BRANCH = "1.0.0.Beta6";
 
-    public final String DEFAULT_STACKS_REPO = "https://raw.github.com/jboss-jdf/jdf-stack/" + FORMAT +  "/stacks.yaml";
+    public final String DEFAULT_STACKS_REPO = "https://raw.github.com/jboss-jdf/jdf-stack/" + STACKS_BRANCH +  "/stacks.yaml";
 
     /**
      * The URL to connect to.

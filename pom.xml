@@ -12,6 +12,8 @@
         <yaml.version>1.10</yaml.version>
         <junit.version>4.10</junit.version>
         <jboss.logging.version>3.1.2.GA</jboss.logging.version>
+        <!-- The Stacks Branch information should be changed also in the StacksClient Interface -->
+        <stacks.branch>1.0.0.Beta6</stacks.branch>
     </properties>
 
     <dependencies>
@@ -51,7 +53,8 @@
                 </configuration>
             </plugin>
             <plugin>
-                <!--  This plugin will always update the content of the embed stacks file -->
+                <!-- This plugin will always update the content of the embed 
+                    stacks file -->
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>wagon-maven-plugin</artifactId>
                 <version>1.0-beta-4</version>
@@ -65,7 +68,7 @@
                         <configuration>
                             <serverId>github</serverId>
                             <url>https://raw.github.com</url>
-                            <fromFile>/jboss-jdf/jdf-stack/1.0.0.Beta6/stacks.yaml</fromFile>
+                            <fromFile>/jboss-jdf/jdf-stack/${stacks.branch}/stacks.yaml</fromFile>
                             <toDir>${project.basedir}/src/main/resources</toDir>
                         </configuration>
                     </execution>
@@ -82,7 +85,8 @@
 
         <pluginManagement>
             <plugins>
-                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+                <!--This plugin's configuration is used to store Eclipse 
+                    m2e settings only. It has no influence on the Maven build itself. -->
                 <plugin>
                     <groupId>org.eclipse.m2e</groupId>
                     <artifactId>lifecycle-mapping</artifactId>

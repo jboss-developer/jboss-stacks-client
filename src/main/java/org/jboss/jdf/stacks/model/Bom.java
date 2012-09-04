@@ -22,7 +22,9 @@
 package org.jboss.jdf.stacks.model;
 
 public class Bom {
-    
+
+    private String id;
+
     private String name;
 
     private String description;
@@ -32,6 +34,14 @@ public class Bom {
     private String artifactId;
 
     private String recommendedVersion;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

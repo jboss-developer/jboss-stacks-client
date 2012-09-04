@@ -30,7 +30,7 @@ public class MajorRelease {
 
     private String version;
 
-    private ServerRuntime recommendedRuntime;
+    private Runtime recommendedRuntime;
 
     private List<MinorRelease> minorReleases = new ArrayList<MinorRelease>();
 
@@ -50,11 +50,11 @@ public class MajorRelease {
         this.version = version;
     }
 
-    public ServerRuntime getRecommendedRuntime() {
+    public Runtime getRecommendedRuntime() {
         return recommendedRuntime;
     }
 
-    public void setRecommendedRuntime(ServerRuntime recommendedRuntime) {
+    public void setRecommendedRuntime(Runtime recommendedRuntime) {
         this.recommendedRuntime = recommendedRuntime;
     }
 

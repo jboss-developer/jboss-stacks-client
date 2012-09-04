@@ -22,8 +22,10 @@
 
 package org.jboss.jdf.stacks.client;
 
-import java.net.MalformedURLException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+import java.util.Properties;
 
 /**
  * @author <a href="mailto:benevides@redhat.com">Rafael Benevides</a>
@@ -53,14 +55,37 @@ public class DefaultStacksClientConfiguration implements StacksClientConfigurati
      */
     @Override
     public URL getUrl() {
+        String repo = null;
         if (url == null) {
             try {
-                return new URL(DEFAULT_STACKS_REPO);
-            } catch (MalformedURLException e) {
-                throw new IllegalStateException(String.format("Could not create URL from '%s'", DEFAULT_STACKS_REPO));
+                repo = System.getProperty(REPO_PROPERTY);
+                if (repo == null) {
+                    repo = getPropertyFromConfig();
+                }
+                return new URL(repo);
+            } catch (Exception e) {
+                throw new IllegalStateException(String.format("Could not create URL from '%s'", repo));
             }
         } else {
             return url;
+        }
+    }
+
+    /**
+     * @return
+     * @throws IOException
+     */
+    private String getPropertyFromConfig() throws IOException {
+        InputStream is = null;
+        try {
+            is = this.getClass().getResourceAsStream("config.properties");
+            Properties p = new Properties();
+            p.load(is);
+            return p.getProperty(REPO_PROPERTY);
+        } finally {
+            if (is != null) {
+                is.close();
+            }
         }
     }
 

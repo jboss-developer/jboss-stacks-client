@@ -25,7 +25,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class ServerRuntime {
+public class Runtime {
+
+    private String id;
 
     private String name;
 
@@ -40,7 +42,7 @@ public class ServerRuntime {
     private String downloadUrl;
 
     private Properties labels = new Properties();
-    
+
     private List<BomVersion> boms = new ArrayList<BomVersion>();
 
     private BomVersion defaultBom;
@@ -48,8 +50,16 @@ public class ServerRuntime {
     private List<ArchetypeVersion> archetypes = new ArrayList<ArchetypeVersion>();
 
     private ArchetypeVersion defaultArchetype;
-    
+
     private String license;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -94,7 +104,7 @@ public class ServerRuntime {
     public String getDownloadUrl() {
         return downloadUrl;
     }
-    
+
     public void setDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
     }
@@ -147,5 +157,4 @@ public class ServerRuntime {
         this.license = license;
     }
 
-   
 }

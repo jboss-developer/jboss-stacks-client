@@ -1,4 +1,4 @@
-package org.jboss.jdf.test;
+package org.jboss.jdf.stacks.client;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;

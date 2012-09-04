@@ -32,9 +32,7 @@ import java.net.URL;
  */
 public interface StacksClientConfiguration {
     
-    public final String STACKS_BRANCH = "1.0.0.Beta6";
-
-    public final String DEFAULT_STACKS_REPO = "https://raw.github.com/jboss-jdf/jdf-stack/" + STACKS_BRANCH +  "/stacks.yaml";
+    public static final String REPO_PROPERTY = "jdf.stacks.client.repo";
 
     /**
      * The URL to connect to.
@@ -105,37 +103,33 @@ public interface StacksClientConfiguration {
      * @param proxyPassword
      */
     public void setProxyPassword(String proxyPassword);
-    
-    
+
     /**
      * If this client is using in a online/offline environment
      * 
      * @return
      */
     public boolean isOnline();
-    
+
     /**
      * Set online/offline environment
      * 
      * @param online
      */
     public void setOnline(boolean online);
-    
+
     /**
-     * Refresh period of local cache.
-     * Default to 86400 seconds (24 hours).
-     * Use -1 to disable cache.
+     * Refresh period of local cache. Default to 86400 seconds (24 hours). Use -1 to disable cache.
      * 
      * @return
      */
     public int getCacheRefreshPeriodInSeconds();
-    
-    
+
     /**
      * Set the refresh period of local cache in seconds
      * 
      * @param seconds
      */
     public void setCacheRefreshPeriodInSeconds(int seconds);
-    
+
 }

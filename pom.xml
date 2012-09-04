@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.jdf</groupId>
     <artifactId>stacks-client</artifactId>
-    <version>1.0.0.Beta6-SNAPSHOT</version>
+    <version>1.0.0.CR1-SNAPSHOT</version>
     <name>JBoss Stacks Parser</name>
     <description>This is project contains a full stacks client with parser capabilities and other features like download, proxy and local cache.</description>
 
@@ -12,8 +12,7 @@
         <yaml.version>1.10</yaml.version>
         <junit.version>4.10</junit.version>
         <jboss.logging.version>3.1.2.GA</jboss.logging.version>
-        <!-- The Stacks Branch information should be changed also in the StacksClient Interface -->
-        <stacks.branch>1.0.0.Beta6</stacks.branch>
+        <stacks.branch>1.0.0.CR1</stacks.branch>
     </properties>
 
     <dependencies>
@@ -42,6 +41,12 @@
 
     <build>
         <finalName>stacks-client</finalName>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>

@@ -25,11 +25,21 @@ import java.util.Properties;
 
 public class BomVersion {
     
+    private String id;
+
     private Bom bom;
 
     private String version;
 
     private Properties labels = new Properties();
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public Bom getBom() {
         return bom;

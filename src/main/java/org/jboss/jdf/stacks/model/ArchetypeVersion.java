@@ -24,12 +24,22 @@ package org.jboss.jdf.stacks.model;
 import java.util.Properties;
 
 public class ArchetypeVersion {
-    
+
+    private String id;
+
     private Archetype archetype;
 
     private String version;
 
     private Properties labels = new Properties();
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public Archetype getArchetype() {
         return archetype;

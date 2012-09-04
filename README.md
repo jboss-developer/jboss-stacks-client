@@ -40,7 +40,9 @@ Example:
 
 If no configuration is supplied, StacksClient will use 'DefaultStacksClientConfiguration' class with de following values:
 
-- url: The URL of stacks yaml file repository
+- url: The URL of stacks yaml file repository. 
+
+  You can use JVM jdf.stacks.client.repo System property to set the url repo value. Ex.: java -Djdf.stacks.client.repo <YourMainClass> 
 
 - proxyHost: Proxy host to use. Default: null
 - proxyPort: Proxy port to use. Default: null
@@ -55,6 +57,7 @@ At any moment will can retrieve the information by calling:
 
         stacksClient.getActualConfiguration();
         
+    
 Getting the Stacks messages
 ---------------------------
 

@@ -5,8 +5,34 @@
     <groupId>org.jboss.jdf</groupId>
     <artifactId>stacks-client</artifactId>
     <version>1.0.0.CR1</version>
+
     <name>JBoss Stacks Parser</name>
     <description>This is project contains a full stacks client with parser capabilities and other features like download, proxy and local cache.</description>
+
+    <url>http://www.jboss.org</url>
+
+    <scm>
+        <connection>scm:git@github.com:jboss-jdf/jdf-stacks-client.git</connection>
+        <developerConnection>scm:git@github.com:jboss-jdf/jdf-stacks-client.git</developerConnection>
+        <url>http://github.com/jboss-jdf/jdf-stacks-client</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>jboss.org</id>
+            <name>JBoss.org Community</name>
+            <organization>JBoss.org</organization>
+            <organizationUrl>http://www.jboss.org</organizationUrl>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License, Version 2.1</name>
+            <url>http://www.gnu.org/licenses/lgpl-2.1.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <properties>
         <httpclient.version>4.0.1</httpclient.version>
@@ -14,7 +40,23 @@
         <junit.version>4.10</junit.version>
         <jboss.logging.version>3.1.2.GA</jboss.logging.version>
         <stacks.branch>1.0.0.CR1</stacks.branch>
+
+        <!-- Repository Deployment URLs -->
+
+        <jboss.releases.repo.url>
+            https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/
+        </jboss.releases.repo.url>
     </properties>
+
+
+    <distributionManagement>
+        <repository>
+            <id>jboss-releases-repository</id>
+            <name>JBoss Releases Repository</name>
+            <url>${jboss.releases.repo.url}</url>
+        </repository>
+    </distributionManagement>
+
 
     <dependencies>
         <dependency>

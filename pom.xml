@@ -39,7 +39,7 @@
         <yaml.version>1.10</yaml.version>
         <junit.version>4.10</junit.version>
         <jboss.logging.version>3.1.2.GA</jboss.logging.version>
-        <stacks.branch>1.0.0.CR1</stacks.branch>
+        <stacks.branch>1.0.0.CR2</stacks.branch>
 
         <!-- Repository Deployment URLs -->
 

@@ -31,6 +31,8 @@ public class ArchetypeVersion {
 
     private String version;
 
+    private String repositoryURL;
+
     private Properties labels = new Properties();
 
     public String getId() {
@@ -55,6 +57,17 @@ public class ArchetypeVersion {
 
     public void setVersion(String version) {
         this.version = version;
+    }
+
+    public String getRepositoryURL() {
+        if (this.repositoryURL == null){
+            return getArchetype().getRepositoryURL();
+        }
+        return repositoryURL;
+    }
+
+    public void setRepositoryURL(String repositoryURL) {
+        this.repositoryURL = repositoryURL;
     }
 
     public Properties getLabels() {

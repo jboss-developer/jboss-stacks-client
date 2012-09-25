@@ -34,6 +34,8 @@ public class Archetype {
     private String artifactId;
 
     private String recommendedVersion;
+    
+    private String repositoryURL;
 
     private Archetype blank;
 
@@ -83,6 +85,14 @@ public class Archetype {
 
     public void setRecommendedVersion(String recommendedVersion) {
         this.recommendedVersion = recommendedVersion;
+    }
+    
+    public String getRepositoryURL() {
+        return repositoryURL;
+    }
+    
+    public void setRepositoryURL(String repositoryURL) {
+        this.repositoryURL = repositoryURL;
     }
 
     public Archetype getBlank() {

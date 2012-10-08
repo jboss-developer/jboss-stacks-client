@@ -4,7 +4,7 @@
 
     <groupId>org.jboss.jdf</groupId>
     <artifactId>stacks-client</artifactId>
-    <version>1.0.0.CR5-SNAPSHOT</version>
+    <version>1.0.0.Final</version>
 
     <name>JBoss Stacks Parser</name>
     <description>This is project contains a full stacks client with parser capabilities and other features like download, proxy and local cache.</description>
@@ -39,7 +39,7 @@
         <yaml.version>1.10</yaml.version>
         <junit.version>4.10</junit.version>
         <jboss.logging.version>3.1.2.GA</jboss.logging.version>
-        <stacks.branch>1.0.0.CR2</stacks.branch>
+        <stacks.branch>1.0.0.Final</stacks.branch>
 
         <!-- Repository Deployment URLs -->
 

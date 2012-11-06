@@ -39,7 +39,7 @@ EOF
 
 notifyEmail()
 {
-   echo "***** Performing JBoss BOM release notifications"
+   echo "***** Performing JBoss Stacks Client release notifications"
    echo "*** Notifying JBoss JDF Dev list team"
    subject=`eval echo $EAP_SUBJECT`
    echo "Email from: " $EAP_EMAIL_FROM

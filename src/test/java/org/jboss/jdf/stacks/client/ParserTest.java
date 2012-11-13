@@ -16,6 +16,6 @@ public class ParserTest {
         InputStream is = this.getClass().getResourceAsStream("/stacks.yaml");
         Parser p = new Parser();
         Stacks stacks = p.parse(is);
-        Assert.assertEquals(stacks.getAvailableBoms().size(), 13);
+        Assert.assertEquals(stacks.getAvailableBoms().size(), 12);
     }
 }

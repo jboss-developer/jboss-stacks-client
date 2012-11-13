@@ -78,7 +78,7 @@ public class DefaultStacksClientConfiguration implements StacksClientConfigurati
     private String getPropertyFromConfig() throws IOException {
         InputStream is = null;
         try {
-            is = this.getClass().getResourceAsStream("config.properties");
+            is = this.getClass().getResourceAsStream("/org/jboss/jdf/stacks/client/config.properties");
             Properties p = new Properties();
             p.load(is);
             return p.getProperty(REPO_PROPERTY);

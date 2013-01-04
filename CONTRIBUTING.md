@@ -4,7 +4,7 @@ jdf-stacks-client Contributing Guide
 Basic Steps
 -----------
 
-To contribute with Stacks, clone your own fork instead of cloning the main Quickstarts repository, commit your work on topic branches and make pull requests. In detail:
+To contribute with Stacks client, clone your own fork instead of cloning the main Stacks client repository, commit your work on topic branches and make pull requests. In detail:
 
 1. [Fork](http://help.github.com/fork-a-repo/) the project.
 

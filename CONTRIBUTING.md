@@ -4,7 +4,9 @@ jdf-stacks-client Contributing Guide
 Basic Steps
 -----------
 
-To contribute with Stacks client, clone your own fork instead of cloning the main Stacks client repository, commit your work on topic branches and make pull requests. In detail:
+To contribute Stacks client, fork the main Stacks client repository, clone your fork, commit your work on topic branches, and make pull requests.
+
+Here are the steps:
 
 1. [Fork](https://github.com/jboss-jdf/jdf-stacks-client/fork_select) the project.
 

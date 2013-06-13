@@ -65,7 +65,7 @@ release()
        [Yy]* ) notify_email;;
    esac
    echo "Don't forget to push the tag and the branch"
-   echo "   git push --tags upstream refs/heads/$RELEASEVERSION"
+   echo "   git push --tags upstream refs/heads/$RELEASEVERSION HEAD"
 }
 
 SNAPSHOTVERSION="UNDEFINED"

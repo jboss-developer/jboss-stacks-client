@@ -33,6 +33,8 @@ import java.net.URL;
 public interface StacksClientConfiguration {
     
     public static final String REPO_PROPERTY = "jdf.stacks.client.repo";
+    public static final String PRESTACKS_REPO_PROPERTY = "jdf.prestacks.client.repo";
+
 
     /**
      * The URL to connect to.

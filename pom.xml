@@ -21,7 +21,7 @@
 
     <groupId>org.jboss.jdf</groupId>
     <artifactId>stacks-client</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2.CR3</version>
 
     <name>JBoss Stacks Parser</name>
     <description>This project contains a full stacks client with parser capabilities and other features like download, proxy and local cache.</description>

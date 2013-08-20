@@ -21,7 +21,7 @@ import java.util.List;
 
 public class Stacks {
 
-    private List<Runtime> availableRuntimes;
+    private List<RuntimeImpl> availableRuntimes;
 
     private List<Bom> availableBoms;
 
@@ -45,11 +45,11 @@ public class Stacks {
         this.availableArchetypes = availableArchetypes;
     }
 
-    public void setAvailableRuntimes(List<Runtime> availableRuntimes) {
+    public void setAvailableRuntimes(List<RuntimeImpl> availableRuntimes) {
         this.availableRuntimes = availableRuntimes;
     }
 
-    public List<Runtime> getAvailableRuntimes() {
+    public List<RuntimeImpl> getAvailableRuntimes() {
         return availableRuntimes;
     }
 

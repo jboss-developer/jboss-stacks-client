@@ -16,23 +16,19 @@
  */
 package org.jboss.jdf.stacks.model;
 
-public class ArchetypeImpl implements Archetype {
+import java.util.Properties;
+
+public class ArchetypeVersionImpl implements ArchetypeVersion{
 
     private String id;
 
-    private String name;
+    private ArchetypeImpl archetype;
 
-    private String description;
+    private String version;
 
-    private String groupId;
-
-    private String artifactId;
-
-    private String recommendedVersion;
-    
     private String repositoryURL;
 
-    private Archetype blank;
+    private Properties labels = new Properties();
 
     public String getId() {
         return id;
@@ -42,60 +38,39 @@ public class ArchetypeImpl implements Archetype {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public ArchetypeImpl getArchetype() {
+        return archetype;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setArchetype(ArchetypeImpl archetype) {
+        this.archetype = archetype;
     }
 
-    public String getDescription() {
-        return description;
+    public String getVersion() {
+        return version;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setVersion(String version) {
+        this.version = version;
     }
 
-    public String getGroupId() {
-        return groupId;
-    }
-
-    public void setGroupId(String groupId) {
-        this.groupId = groupId;
-    }
-
-    public String getArtifactId() {
-        return artifactId;
-    }
-
-    public void setArtifactId(String artifactId) {
-        this.artifactId = artifactId;
-    }
-
-    public String getRecommendedVersion() {
-        return recommendedVersion;
-    }
-
-    public void setRecommendedVersion(String recommendedVersion) {
-        this.recommendedVersion = recommendedVersion;
-    }
-    
     public String getRepositoryURL() {
+        if (this.repositoryURL == null){
+            return getArchetype().getRepositoryURL();
+        }
         return repositoryURL;
     }
-    
+
     public void setRepositoryURL(String repositoryURL) {
         this.repositoryURL = repositoryURL;
     }
 
-    public Archetype getBlank() {
-        return blank;
+    public Properties getLabels() {
+        return labels;
     }
 
-    public void setBlank(Archetype blank) {
-        this.blank = blank;
+    public void setLabels(Properties labels) {
+        this.labels = labels;
     }
 
     /*
@@ -124,10 +99,10 @@ public class ArchetypeImpl implements Archetype {
         if (obj == null) {
             return false;
         }
-        if (!(obj instanceof ArchetypeImpl)) {
+        if (!(obj instanceof ArchetypeVersionImpl)) {
             return false;
         }
-        ArchetypeImpl other = (ArchetypeImpl) obj;
+        ArchetypeVersionImpl other = (ArchetypeVersionImpl) obj;
         if (id == null) {
             if (other.id != null) {
                 return false;
@@ -145,7 +120,7 @@ public class ArchetypeImpl implements Archetype {
      */
     @Override
     public String toString() {
-        return "Archetype [id=" + id + "]";
+        return "ArchetypeVersion [id=" + id + "]";
     }
 
 }

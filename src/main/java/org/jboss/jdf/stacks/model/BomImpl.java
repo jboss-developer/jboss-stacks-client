@@ -16,7 +16,7 @@
  */
 package org.jboss.jdf.stacks.model;
 
-public class ArchetypeImpl implements Archetype {
+public class BomImpl implements Bom{
 
     private String id;
 
@@ -24,15 +24,11 @@ public class ArchetypeImpl implements Archetype {
 
     private String description;
 
-    private String groupId;
+    private String groupId = "org.jboss.bom";
 
     private String artifactId;
 
     private String recommendedVersion;
-    
-    private String repositoryURL;
-
-    private Archetype blank;
 
     public String getId() {
         return id;
@@ -63,7 +59,9 @@ public class ArchetypeImpl implements Archetype {
     }
 
     public void setGroupId(String groupId) {
-        this.groupId = groupId;
+        if (groupId != null) {
+            this.groupId = groupId;
+        }
     }
 
     public String getArtifactId() {
@@ -80,22 +78,6 @@ public class ArchetypeImpl implements Archetype {
 
     public void setRecommendedVersion(String recommendedVersion) {
         this.recommendedVersion = recommendedVersion;
-    }
-    
-    public String getRepositoryURL() {
-        return repositoryURL;
-    }
-    
-    public void setRepositoryURL(String repositoryURL) {
-        this.repositoryURL = repositoryURL;
-    }
-
-    public Archetype getBlank() {
-        return blank;
-    }
-
-    public void setBlank(Archetype blank) {
-        this.blank = blank;
     }
 
     /*
@@ -124,10 +106,10 @@ public class ArchetypeImpl implements Archetype {
         if (obj == null) {
             return false;
         }
-        if (!(obj instanceof ArchetypeImpl)) {
+        if (!(obj instanceof BomImpl)) {
             return false;
         }
-        ArchetypeImpl other = (ArchetypeImpl) obj;
+        BomImpl other = (BomImpl) obj;
         if (id == null) {
             if (other.id != null) {
                 return false;
@@ -145,7 +127,7 @@ public class ArchetypeImpl implements Archetype {
      */
     @Override
     public String toString() {
-        return "Archetype [id=" + id + "]";
+        return "Bom [id=" + id + "]";
     }
 
 }

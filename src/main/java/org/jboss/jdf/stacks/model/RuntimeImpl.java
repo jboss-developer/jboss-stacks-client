@@ -16,23 +16,37 @@
  */
 package org.jboss.jdf.stacks.model;
 
-public class ArchetypeImpl implements Archetype {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
+public class RuntimeImpl implements Runtime{
 
     private String id;
 
     private String name;
 
-    private String description;
-
     private String groupId;
 
     private String artifactId;
 
-    private String recommendedVersion;
-    
-    private String repositoryURL;
+    private String version;
 
-    private Archetype blank;
+    private String url;
+
+    private String downloadUrl;
+
+    private Properties labels = new Properties();
+
+    private List<BomVersion> boms = new ArrayList<BomVersion>();
+
+    private BomVersion defaultBom;
+
+    private List<ArchetypeVersion> archetypes = new ArrayList<ArchetypeVersion>();
+
+    private ArchetypeVersion defaultArchetype;
+
+    private String license;
 
     public String getId() {
         return id;
@@ -48,14 +62,6 @@ public class ArchetypeImpl implements Archetype {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getGroupId() {
@@ -74,28 +80,76 @@ public class ArchetypeImpl implements Archetype {
         this.artifactId = artifactId;
     }
 
-    public String getRecommendedVersion() {
-        return recommendedVersion;
+    public String getVersion() {
+        return version;
     }
 
-    public void setRecommendedVersion(String recommendedVersion) {
-        this.recommendedVersion = recommendedVersion;
-    }
-    
-    public String getRepositoryURL() {
-        return repositoryURL;
-    }
-    
-    public void setRepositoryURL(String repositoryURL) {
-        this.repositoryURL = repositoryURL;
+    public void setVersion(String version) {
+        this.version = version;
     }
 
-    public Archetype getBlank() {
-        return blank;
+    public String getUrl() {
+        return url;
     }
 
-    public void setBlank(Archetype blank) {
-        this.blank = blank;
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getDownloadUrl() {
+        return downloadUrl;
+    }
+
+    public void setDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+    }
+
+    public Properties getLabels() {
+        return labels;
+    }
+
+    public void setLabels(Properties labels) {
+        this.labels = labels;
+    }
+
+    public List<BomVersion> getBoms() {
+        return boms;
+    }
+
+    public void setBoms(List<BomVersion> boms) {
+        this.boms = boms;
+    }
+
+    public BomVersion getDefaultBom() {
+        return defaultBom;
+    }
+
+    public void setDefaultBom(BomVersion defaultBom) {
+        this.defaultBom = defaultBom;
+    }
+
+    public List<ArchetypeVersion> getArchetypes() {
+        return archetypes;
+    }
+
+    public void setArchetypes(List<ArchetypeVersion> archetypes) {
+        this.archetypes = archetypes;
+    }
+
+    public ArchetypeVersion getDefaultArchetype() {
+        return defaultArchetype;
+    }
+
+    public void setDefaultArchetype(ArchetypeVersion defaultArchetype) {
+        this.defaultArchetype = defaultArchetype;
+    }
+
+    public String getLicense() {
+        return license;
+    }
+
+    public void setLicense(String license) {
+        this.license = license;
     }
 
     /*
@@ -124,10 +178,10 @@ public class ArchetypeImpl implements Archetype {
         if (obj == null) {
             return false;
         }
-        if (!(obj instanceof ArchetypeImpl)) {
+        if (!(obj instanceof RuntimeImpl)) {
             return false;
         }
-        ArchetypeImpl other = (ArchetypeImpl) obj;
+        RuntimeImpl other = (RuntimeImpl) obj;
         if (id == null) {
             if (other.id != null) {
                 return false;
@@ -138,14 +192,9 @@ public class ArchetypeImpl implements Archetype {
         return true;
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see java.lang.Object#toString()
-     */
     @Override
     public String toString() {
-        return "Archetype [id=" + id + "]";
+        return "Runtime [id=" + id + "]";
     }
 
 }

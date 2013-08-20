@@ -25,7 +25,7 @@ public class MajorReleaseImpl implements MajorRelease{
 
     private String version;
 
-    private RuntimeImpl recommendedRuntime;
+    private Runtime recommendedRuntime;
 
     private List<MinorRelease> minorReleases = new ArrayList<MinorRelease>();
 
@@ -45,11 +45,11 @@ public class MajorReleaseImpl implements MajorRelease{
         this.version = version;
     }
 
-    public RuntimeImpl getRecommendedRuntime() {
+    public Runtime getRecommendedRuntime() {
         return recommendedRuntime;
     }
 
-    public void setRecommendedRuntime(RuntimeImpl recommendedRuntime) {
+    public void setRecommendedRuntime(Runtime recommendedRuntime) {
         this.recommendedRuntime = recommendedRuntime;
     }
 

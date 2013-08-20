@@ -22,7 +22,7 @@ public class ArchetypeVersionImpl implements ArchetypeVersion{
 
     private String id;
 
-    private ArchetypeImpl archetype;
+    private Archetype archetype;
 
     private String version;
 
@@ -38,11 +38,11 @@ public class ArchetypeVersionImpl implements ArchetypeVersion{
         this.id = id;
     }
 
-    public ArchetypeImpl getArchetype() {
+    public Archetype getArchetype() {
         return archetype;
     }
 
-    public void setArchetype(ArchetypeImpl archetype) {
+    public void setArchetype(Archetype archetype) {
         this.archetype = archetype;
     }
 

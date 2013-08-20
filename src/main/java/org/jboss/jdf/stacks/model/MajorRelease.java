@@ -8,7 +8,7 @@ public interface MajorRelease {
 
 	public String getVersion();
 
-	public RuntimeImpl getRecommendedRuntime();
+	public Runtime getRecommendedRuntime();
 
 	public List<MinorRelease> getMinorReleases();
 

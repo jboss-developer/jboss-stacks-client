@@ -16,7 +16,7 @@
  */
 package org.jboss.jdf.stacks.model;
 
-public class Archetype {
+public class ArchetypeImpl implements Archetype {
 
     private String id;
 
@@ -124,10 +124,10 @@ public class Archetype {
         if (obj == null) {
             return false;
         }
-        if (!(obj instanceof Archetype)) {
+        if (!(obj instanceof ArchetypeImpl)) {
             return false;
         }
-        Archetype other = (Archetype) obj;
+        ArchetypeImpl other = (ArchetypeImpl) obj;
         if (id == null) {
             if (other.id != null) {
                 return false;

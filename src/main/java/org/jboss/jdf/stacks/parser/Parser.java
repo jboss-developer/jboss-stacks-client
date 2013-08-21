@@ -18,13 +18,13 @@ package org.jboss.jdf.stacks.parser;
 
 import java.io.InputStream;
 
-import org.jboss.jdf.stacks.model.Archetype;
-import org.jboss.jdf.stacks.model.ArchetypeVersion;
-import org.jboss.jdf.stacks.model.Bom;
-import org.jboss.jdf.stacks.model.BomVersion;
-import org.jboss.jdf.stacks.model.MajorRelease;
-import org.jboss.jdf.stacks.model.MinorRelease;
-import org.jboss.jdf.stacks.model.Runtime;
+import org.jboss.jdf.stacks.model.ArchetypeImpl;
+import org.jboss.jdf.stacks.model.ArchetypeVersionImpl;
+import org.jboss.jdf.stacks.model.BomImpl;
+import org.jboss.jdf.stacks.model.BomVersionImpl;
+import org.jboss.jdf.stacks.model.MajorReleaseImpl;
+import org.jboss.jdf.stacks.model.MinorReleaseImpl;
+import org.jboss.jdf.stacks.model.RuntimeImpl;
 import org.jboss.jdf.stacks.model.Stacks;
 import org.yaml.snakeyaml.TypeDescription;
 import org.yaml.snakeyaml.Yaml;
@@ -41,13 +41,13 @@ public class Parser {
         CustomClassloaderConstructor constructor = new CustomClassloaderConstructor(Stacks.class, this.getClass()
                 .getClassLoader());
         TypeDescription stackDescription = new TypeDescription(Stacks.class);
-        stackDescription.putListPropertyType("availableBoms", Bom.class);
-        stackDescription.putListPropertyType("availableBomVersions", BomVersion.class);
-        stackDescription.putListPropertyType("availableRuntimes", Runtime.class);
-        stackDescription.putListPropertyType("availableArchetypes", Archetype.class);
-        stackDescription.putListPropertyType("availableArchetypeVersions", ArchetypeVersion.class);
-        stackDescription.putListPropertyType("minorReleases", MinorRelease.class);
-        stackDescription.putListPropertyType("majorReleases", MajorRelease.class);
+        stackDescription.putListPropertyType("availableBoms", BomImpl.class);
+        stackDescription.putListPropertyType("availableBomVersions", BomVersionImpl.class);
+        stackDescription.putListPropertyType("availableRuntimes", RuntimeImpl.class);
+        stackDescription.putListPropertyType("availableArchetypes", ArchetypeImpl.class);
+        stackDescription.putListPropertyType("availableArchetypeVersions", ArchetypeVersionImpl.class);
+        stackDescription.putListPropertyType("minorReleases", MinorReleaseImpl.class);
+        stackDescription.putListPropertyType("majorReleases", MajorReleaseImpl.class);
    
         constructor.addTypeDescription(stackDescription);
         Yaml yaml = new Yaml(constructor);

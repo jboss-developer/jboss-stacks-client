@@ -35,6 +35,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.jboss.jdf.stacks.client.messages.JBossLoggingMessages;
 import org.jboss.jdf.stacks.client.messages.StacksMessages;
 import org.jboss.jdf.stacks.model.Stacks;
+import org.jboss.jdf.stacks.model.StacksImpl;
 import org.jboss.jdf.stacks.parser.Parser;
 
 /**
@@ -60,12 +61,12 @@ public class StacksClient {
         this.actualConfiguration = configuration;
     }
 
-    private Stacks initializeStacks() {
+    private StacksImpl initializeStacks() {
         InputStream inputStream = null;
         try {
             // Retrieve inputStream (local cache or remote)
             inputStream = getStacksInputStream();
-            Stacks stacks = null;
+            StacksImpl stacks = null;
             if (inputStream != null) {
                 stacks = new Parser().parse(inputStream);
             }

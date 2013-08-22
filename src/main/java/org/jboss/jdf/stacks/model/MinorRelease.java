@@ -14,38 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.jboss.jdf.stacks.model;
 
-public class MinorRelease {
+public interface MinorRelease {
 
-    private String name;
+    public String getName();
 
-    private String version;
+    public String getVersion();
 
-    private Runtime recommendedRuntime;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
-    public Runtime getRecommendedRuntime() {
-        return recommendedRuntime;
-    }
-
-    public void setRecommendedRuntime(Runtime recommendedRuntime) {
-        this.recommendedRuntime = recommendedRuntime;
-    }
+    public Runtime getRecommendedRuntime();
 
 }

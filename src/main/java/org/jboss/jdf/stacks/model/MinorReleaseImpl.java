@@ -14,25 +14,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.jboss.jdf.stacks.model;
 
-public interface Archetype {
+public class MinorReleaseImpl implements MinorRelease{
 
-    public String getId();
+    private String name;
 
-    public String getName();
+    private String version;
 
-    public String getDescription();
+    private Runtime recommendedRuntime;
 
-    public String getGroupId();
+    public String getName() {
+        return name;
+    }
 
-    public String getArtifactId();
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public String getRecommendedVersion();
+    public String getVersion() {
+        return version;
+    }
 
-    public String getRepositoryURL();
+    public void setVersion(String version) {
+        this.version = version;
+    }
 
-    public Archetype getBlank();
+    public Runtime getRecommendedRuntime() {
+        return recommendedRuntime;
+    }
+
+    public void setRecommendedRuntime(Runtime recommendedRuntime) {
+        this.recommendedRuntime = recommendedRuntime;
+    }
 
 }

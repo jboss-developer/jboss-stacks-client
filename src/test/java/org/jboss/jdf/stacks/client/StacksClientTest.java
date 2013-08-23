@@ -26,8 +26,6 @@ import java.util.logging.Logger;
 
 import junit.framework.Assert;
 
-import org.jboss.jdf.stacks.client.StacksClient;
-import org.jboss.jdf.stacks.client.StacksClientConfiguration;
 import org.jboss.jdf.stacks.model.Stacks;
 import org.junit.BeforeClass;
 import org.junit.Test;

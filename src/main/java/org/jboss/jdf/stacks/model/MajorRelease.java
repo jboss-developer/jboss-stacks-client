@@ -14,50 +14,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.jboss.jdf.stacks.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class MajorRelease {
-    
-    private String name;
+public interface MajorRelease {
 
-    private String version;
+    public String getName();
 
-    private Runtime recommendedRuntime;
+    public String getVersion();
 
-    private List<MinorRelease> minorReleases = new ArrayList<MinorRelease>();
+    public Runtime getRecommendedRuntime();
 
-    public String getName() {
-        return name;
-    }
+    public List<MinorRelease> getMinorReleases();
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
-    public Runtime getRecommendedRuntime() {
-        return recommendedRuntime;
-    }
-
-    public void setRecommendedRuntime(Runtime recommendedRuntime) {
-        this.recommendedRuntime = recommendedRuntime;
-    }
-
-    public List<MinorRelease> getMinorReleases() {
-        return minorReleases;
-    }
-
-    public void setMinorReleases(List<MinorRelease> minorReleases) {
-        this.minorReleases = minorReleases;
-    }
 }

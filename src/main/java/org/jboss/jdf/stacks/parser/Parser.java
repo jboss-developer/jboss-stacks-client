@@ -26,6 +26,7 @@ import org.jboss.jdf.stacks.model.MajorReleaseImpl;
 import org.jboss.jdf.stacks.model.MinorReleaseImpl;
 import org.jboss.jdf.stacks.model.RuntimeImpl;
 import org.jboss.jdf.stacks.model.Stacks;
+import org.jboss.jdf.stacks.model.StacksImpl;
 import org.yaml.snakeyaml.TypeDescription;
 import org.yaml.snakeyaml.Yaml;
 
@@ -38,9 +39,9 @@ import org.yaml.snakeyaml.Yaml;
 public class Parser {
 
     public Stacks parse(InputStream is) {
-        CustomClassloaderConstructor constructor = new CustomClassloaderConstructor(Stacks.class, this.getClass()
+        CustomClassloaderConstructor constructor = new CustomClassloaderConstructor(StacksImpl.class, this.getClass()
                 .getClassLoader());
-        TypeDescription stackDescription = new TypeDescription(Stacks.class);
+        TypeDescription stackDescription = new TypeDescription(StacksImpl.class);
         stackDescription.putListPropertyType("availableBoms", BomImpl.class);
         stackDescription.putListPropertyType("availableBomVersions", BomVersionImpl.class);
         stackDescription.putListPropertyType("availableRuntimes", RuntimeImpl.class);
@@ -51,7 +52,7 @@ public class Parser {
    
         constructor.addTypeDescription(stackDescription);
         Yaml yaml = new Yaml(constructor);
-        Stacks data = (Stacks) yaml.load(is);
+        StacksImpl data = (StacksImpl) yaml.load(is);
         return data;
     }
 

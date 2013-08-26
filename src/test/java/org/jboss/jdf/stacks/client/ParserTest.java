@@ -16,6 +16,8 @@
  */
 package org.jboss.jdf.stacks.client;
 
+import static org.jboss.jdf.stacks.client.StacksClientConfiguration.PRESTACKS_REPO_PROPERTY;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,8 +29,6 @@ import junit.framework.Assert;
 import org.jboss.jdf.stacks.model.Stacks;
 import org.jboss.jdf.stacks.parser.Parser;
 import org.junit.Test;
-
-import static org.jboss.jdf.stacks.client.StacksClientConfiguration.PRESTACKS_REPO_PROPERTY;
 
 public class ParserTest {
 

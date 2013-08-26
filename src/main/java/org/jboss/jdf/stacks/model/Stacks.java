@@ -14,90 +14,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.jboss.jdf.stacks.model;
 
 import java.util.List;
 
+public interface Stacks {
 
-public class Stacks {
+    public List<Archetype> getAvailableArchetypes();
 
-    private List<Runtime> availableRuntimes;
+    public List<Runtime> getAvailableRuntimes();
 
-    private List<Bom> availableBoms;
+    public List<Bom> getAvailableBoms();
 
-    private List<BomVersion> availableBomVersions;
+    public List<MinorRelease> getMinorReleases();
 
-    private List<Archetype> availableArchetypes;
+    public List<MajorRelease> getMajorReleases();
 
-    private List<ArchetypeVersion> availableArchetypeVersions;
+    public List<BomVersion> getAvailableBomVersions();
 
-    private List<MinorRelease> minorReleases;
+    public List<ArchetypeVersion> getAvailableArchetypeVersions();
 
-    private List<MajorRelease> majorReleases;
-    
-    private List<String> licenses;
+    public List<String> getLicenses();
 
-    public List<Archetype> getAvailableArchetypes() {
-        return availableArchetypes;
-    }
-
-    public void setAvailableArchetypes(List<Archetype> availableArchetypes) {
-        this.availableArchetypes = availableArchetypes;
-    }
-
-    public void setAvailableRuntimes(List<Runtime> availableRuntimes) {
-        this.availableRuntimes = availableRuntimes;
-    }
-
-    public List<Runtime> getAvailableRuntimes() {
-        return availableRuntimes;
-    }
-
-    public List<Bom> getAvailableBoms() {
-        return availableBoms;
-    }
-
-    public void setAvailableBoms(List<Bom> availableBoms) {
-        this.availableBoms = availableBoms;
-    }
-
-    public List<MinorRelease> getMinorReleases() {
-        return minorReleases;
-    }
-
-    public void setMinorReleases(List<MinorRelease> minorReleases) {
-        this.minorReleases = minorReleases;
-    }
-
-    public List<MajorRelease> getMajorReleases() {
-        return majorReleases;
-    }
-
-    public void setMajorReleases(List<MajorRelease> majorReleases) {
-        this.majorReleases = majorReleases;
-    }
-
-    public List<BomVersion> getAvailableBomVersions() {
-        return availableBomVersions;
-    }
-
-    public void setAvailableBomVersions(List<BomVersion> availableBomVersions) {
-        this.availableBomVersions = availableBomVersions;
-    }
-
-    public List<ArchetypeVersion> getAvailableArchetypeVersions() {
-        return availableArchetypeVersions;
-    }
-
-    public void setAvailableArchetypeVersions(List<ArchetypeVersion> availableArchetypeVersions) {
-        this.availableArchetypeVersions = availableArchetypeVersions;
-    }
-    
-    public List<String> getLicenses() {
-        return licenses;
-    }
-    
-    public void setLicenses(List<String> licenses) {
-        this.licenses = licenses;
-    }
 }

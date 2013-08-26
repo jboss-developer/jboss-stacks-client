@@ -35,6 +35,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.jboss.jdf.stacks.client.messages.JBossLoggingMessages;
 import org.jboss.jdf.stacks.client.messages.StacksMessages;
 import org.jboss.jdf.stacks.model.Stacks;
+import org.jboss.jdf.stacks.model.StacksImpl;
 import org.jboss.jdf.stacks.parser.Parser;
 
 /**

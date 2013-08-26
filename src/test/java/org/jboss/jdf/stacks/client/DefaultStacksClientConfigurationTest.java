@@ -46,6 +46,9 @@ public class DefaultStacksClientConfigurationTest {
             Assert.fail("Should fail with a not valid URL from system Property");
         } catch (IllegalStateException e) {
             Assert.assertNotNull("Should fail with a not valid URL from system Property", e);
+        }finally{
+            //Reset System property after this test
+            System.getProperties().remove(DefaultStacksClientConfiguration.REPO_PROPERTY);
         }
     }
 

@@ -52,7 +52,7 @@ public class Parser {
    
         constructor.addTypeDescription(stackDescription);
         Yaml yaml = new Yaml(constructor);
-        StacksImpl data = (StacksImpl) yaml.load(is);
+        Stacks data = (Stacks) yaml.load(is);
         return data;
     }
 

@@ -64,6 +64,9 @@
         <jboss.releases.repo.url>
             https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/
         </jboss.releases.repo.url>
+        
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
     </properties>
 
 
@@ -109,15 +112,6 @@
             </resource>
         </resources>
         <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
             <plugin>
                 <!-- This plugin will always update the content of the embed 
                     stacks file -->

@@ -16,6 +16,8 @@
  */
 package org.jboss.jdf.stacks.model;
 
+import java.util.Properties;
+
 public class ArchetypeImpl implements Archetype {
 
     private String id;
@@ -33,6 +35,8 @@ public class ArchetypeImpl implements Archetype {
     private String repositoryURL;
 
     private Archetype blank;
+
+    private Properties labels = new Properties();
 
     public String getId() {
         return id;
@@ -98,6 +102,14 @@ public class ArchetypeImpl implements Archetype {
         this.blank = blank;
     }
 
+    public Properties getLabels() {
+        return labels;
+    }
+
+    public void setLabels(Properties labels) {
+        this.labels = labels;
+    }    
+    
     /*
      * (non-Javadoc)
      * 

@@ -17,6 +17,8 @@
 
 package org.jboss.jdf.stacks.model;
 
+import java.util.Properties;
+
 public interface Archetype {
 
     public String getId();
@@ -35,4 +37,5 @@ public interface Archetype {
 
     public Archetype getBlank();
 
+    public Properties getLabels();
 }

@@ -14,7 +14,7 @@ If you need to convert the stack.yaml file to Java Objects add the following dep
         <dependency>
             <groupId>org.jboss.developer</groupId>
             <artifactId>stacks-client</artifactId>
-            <version>1.0.3-SNAPSHOT</version>
+            <version>1.1.0.CR1</version>
         </dependency>
         
 Then you can use the stacks-client API:        

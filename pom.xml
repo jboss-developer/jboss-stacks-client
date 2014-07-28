@@ -19,7 +19,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.jboss.developer</groupId>
+    <groupId>org.jboss.jdf</groupId>
     <artifactId>stacks-client</artifactId>
     <version>1.1.0-SNAPSHOT</version>
 
@@ -29,8 +29,8 @@
     <url>http://www.jboss.org</url>
 
     <scm>
-        <connection>scm:git@github.com:jboss-developer/jboss-stacks-client.git</connection>
-        <developerConnection>scm:git@github.com:jboss-developer/jboss-stacks-client.git</developerConnection>
+        <connection>scm:git@github.com:jboss-jdf/jdf-stacks-client.git</connection>
+        <developerConnection>scm:git@github.com:jboss-jdf/jdf-stacks-client.git</developerConnection>
         <url>http://github.com/jboss-jdf/jdf-stacks-client</url>
     </scm>
 
@@ -117,7 +117,7 @@
                     stacks file -->
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>wagon-maven-plugin</artifactId>
-                <version>1.0-beta-5</version>
+                <version>1.0-beta-4</version>
                 <executions>
                     <execution>
                         <id>download-test-data</id>
@@ -128,7 +128,7 @@
                         <configuration>
                             <serverId>github</serverId>
                             <url>https://raw.github.com</url>
-                            <fromFile>/jboss-developer/jboss-stacks/${stacks.branch}/stacks.yaml</fromFile>
+                            <fromFile>/jboss-jdf/jdf-stack/${stacks.branch}/stacks.yaml</fromFile>
                             <toDir>${project.basedir}/src/main/resources</toDir>
                         </configuration>
                     </execution>
@@ -157,7 +157,7 @@
                                     <pluginExecutionFilter>
                                         <groupId>org.codehaus.mojo</groupId>
                                         <artifactId>wagon-maven-plugin</artifactId>
-                                        <versionRange>[1.0-beta-5,)</versionRange>
+                                        <versionRange>[1.0-beta-4,)</versionRange>
                                         <goals>
                                             <goal>download-single</goal>
                                         </goals>

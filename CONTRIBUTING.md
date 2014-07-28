@@ -10,15 +10,15 @@ If you don't have the Git client (`git`), get it from: <http://git-scm.com/>
 
 Here are the steps in detail:
 
-1. [Fork](https://github.com/jboss-developer/jboss-stacks-client/fork_select) the project. This creates a the project in your own Git.
+1. [Fork](https://github.com/jboss-jdf/jdf-stacks-client/fork_select) the project. This creates a the project in your own Git.
 
 2. Clone your fork. This creates a directory in your local file system.
 
-        git clone git@github.com:<your-username>/jboss-stacks-client.git
+        git clone git@github.com:<your-username>/jdf-stacks-client.git
 
 3. Add the remote `upstream` repository.
 
-        git remote add upstream git@github.com:jboss-developer/jboss-stacks-client.git
+        git remote add upstream git@github.com:jboss-jdf/jdf-stacks-client.git
 
 4. Get the latest files from the `upstream` repository.
 

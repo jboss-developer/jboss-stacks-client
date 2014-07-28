@@ -12,7 +12,7 @@ How to use this API ?
 If you need to convert the stack.yaml file to Java Objects add the following dependency to your project
 
         <dependency>
-            <groupId>org.jboss.developer</groupId>
+            <groupId>org.jboss.jdf</groupId>
             <artifactId>stacks-client</artifactId>
             <version>1.1.0-SNAPSHOT</version>
         </dependency>
@@ -25,7 +25,7 @@ Then you can use the stacks-client API:
 When you get the Stacks the stacks-client will retrieve the Stacks.yaml file from its repository and cache it locally.
 The cache will be updated once a day (24 hours since last update)
 
-With the stacks object, you can navigate on the stacks graph. For more information take a look at the [Stacks format diagram](https://raw.githubusercontent.com/jboss-developer/jboss-stacks/1.0.0.Final/fileformat.png)
+With the stacks object, you can navigate on the stacks graph. For more information take a look at the [Stacks format diagram](https://raw.github.com/jboss-jdf/jdf-stack/1.0.0.Final/fileformat.png)
 
 Examples:
 
@@ -58,7 +58,7 @@ If no configuration is supplied, StacksClient will use 'DefaultStacksClientConfi
 
 - url: The URL of stacks yaml file repository. 
 
-  You can use JVM jdf.stacks.client.repo System property to set the url repo value. Ex.: java -Djboss-developer.stacks.client.repo <YourMainClass> 
+  You can use JVM jdf.stacks.client.repo System property to set the url repo value. Ex.: java -Djdf.stacks.client.repo <YourMainClass> 
 
 - proxyHost: Proxy host to use. Default: null
 - proxyPort: Proxy port to use. Default: null

@@ -25,7 +25,7 @@ Then you can use the stacks-client API:
 When you get the Stacks the stacks-client will retrieve the Stacks.yaml file from its repository and cache it locally.
 The cache will be updated once a day (24 hours since last update)
 
-With the stacks object, you can navigate on the stacks graph. For more information take a look at the [Stacks format diagram](https://raw.github.com/jboss-jdf/jdf-stack/1.0.0.Final/fileformat.png)
+With the stacks object, you can navigate on the stacks graph. For more information take a look at the [Stacks format diagram](https://raw.githubusercontent.com/jboss-developer/jboss-stacks/1.0.0.Final/fileformat.png)
 
 Examples:
 
